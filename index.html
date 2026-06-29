@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>卓君風 | Grok1 - AI 內容與技能實驗室</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Inter:wght@300;400;500;600&display=swap');
+        
+        :root {
+            --primary: #0F172A;
+        }
+        
+        body {
+            font-family: 'Noto Sans TC', 'Inter', system_ui, sans-serif;
+        }
+        
+        .section-header {
+            font-size: 2.25rem;
+            line-height: 2.5rem;
+            font-weight: 700;
+            letter-spacing: -0.025em;
+        }
+        
+        .skill-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .skill-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+        
+        .nav-link {
+            transition: color 0.2s ease;
+        }
+        
+        .nav-link:hover {
+            color: #64748b;
+        }
+        
+        .grok-gradient {
+            background: linear-gradient(135deg, #0F172A 0%, #1E2937 100%);
+        }
+        
+        .accent {
+            color: #64748b;
+        }
+        
+        .modern-shadow {
+            box-shadow: 0 10px 15px -3px rgb(15 23 42 / 0.1), 0 4px 6px -4px rgb(15 23 42 / 0.1);
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-200">
+    <!-- Navbar -->
+    <nav class="border-b border-slate-800 bg-slate-950/95 backdrop-blur-lg fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center gap-x-3">
+                    <div class="w-9 h-9 bg-white rounded-2xl flex items-center justify-center">
+                        <span class="text-slate-950 font-bold text-2xl tracking-tighter">G1</span>
+                    </div>
+                    <div>
+                        <span class="font-semibold text-2xl tracking-tight">Grok1</span>
+                    </div>
+                </div>
+                
+                <div class="hidden md:flex items-center gap-x-8 text-sm">
+                    <a href="#about" class="nav-link text-slate-300 hover:text-white">關於我</a>
+                    <a href="#skills" class="nav-link text-slate-300 hover:text-white">自訂技能</a>
+                    <a href="#work" class="nav-link text-slate-300 hover:text-white">創作工作</a>
+                    <a href="#how" class="nav-link text-slate-300 hover:text-white">與 Grok 合作</a>
+                </div>
+                
+                <div class="flex items-center gap-x-4">
+                    <a href="https://x.com/nosdu8" target="_blank" 
+                       class="flex items-center gap-x-2 px-4 py-2 text-sm rounded-3xl border border-slate-700 hover:bg-slate-900 transition-colors">
+                        <i class="fa-brands fa-x-twitter"></i>
+                        <span class="hidden sm:inline">@nosdu8</span>
+                    </a>
+                    <a href="https://github.com/Cullinan30a/grok1" target="_blank"
+                       class="px-5 py-2.5 text-sm font-medium bg-white text-slate-950 rounded-3xl hover:bg-slate-100 transition-colors flex items-center gap-x-2">
+                        <i class="fa-brands fa-github"></i>
+                        <span>GitHub</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="pt-20 pb-16 grok-gradient">
+        <div class="max-w-5xl mx-auto px-6 pt-16 pb-12">
+            <div class="max-w-3xl">
+                <div class="inline-flex items-center gap-x-2 px-4 py-1.5 rounded-3xl bg-white/10 text-sm mb-6">
+                    <div class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></div>
+                    <span class="text-emerald-400 font-medium">目前使用 Grok 建構中</span>
+                </div>
+                
+                <h1 class="text-7xl md:text-8xl font-bold tracking-tighter leading-none mb-4">
+                    卓君風<br>
+                    <span class="text-slate-400">Vernon</span>
+                </h1>
+                
+                <p class="text-2xl md:text-3xl text-slate-300 tracking-tight mb-8 max-w-lg">
+                    香港保險從業員 × Grok AI 內容創作者 × 自訂技能開發者
+                </p>
+                
+                <div class="flex flex-wrap gap-4">
+                    <a href="#skills" 
+                       class="inline-flex items-center justify-center px-8 py-4 bg-white text-slate-950 font-semibold rounded-3xl hover:bg-slate-100 transition-all active:scale-[0.985]">
+                        探索我的自訂技能
+                    </a>
+                    <a href="#work" 
+                       class="inline-flex items-center justify-center px-8 py-4 border border-slate-700 hover:bg-slate-900 rounded-3xl transition-all">
+                        查看創作作品
+                    </a>
+                </div>
+                
+                <div class="mt-12 flex items-center gap-x-6 text-sm text-slate-400">
+                    <div class="flex items-center gap-x-2">
+                        <i class="fa-solid fa-map-marker-alt"></i>
+                        <span>台北 / 香港</span>
+                    </div>
+                    <div class="w-px h-3 bg-slate-700"></div>
+                    <span>SuperGrok 用戶</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <div id="about" class="max-w-5xl mx-auto px-6 py-20 border-b border-slate-800">
+        <div class="grid md:grid-cols-12 gap-x-12 gap-y-10 items-center">
+            <div class="md:col-span-5">
+                <div class="sticky top-24">
+                    <div class="text-sm uppercase tracking-[3px] text-slate-500 mb-3">ABOUT</div>
+                    <h2 class="section-header tracking-tighter">我是誰？</h2>
+                </div>
+            </div>
+            
+            <div class="md:col-span-7 text-lg text-slate-300 leading-relaxed space-y-6">
+                <p>我係<strong class="text-white">卓君風</strong>，香港保險行業從業員，專注為新手爸媽提供實用保險教育內容。</p>
+                
+                <p>同時，我係一位熱衷於 <strong class="text-white">Grok AI</strong> 的內容創作者與系統建構者。我開發了多個專屬自訂技能，讓 Grok 能更精準地協助我進行身份鎖定、粵語腳本標準化、運動動作影片提示生成，以及保險計劃比較等工作。</p>
+                
+                <p>我的目標是建立高效的「影像智慧自動執行系統」，結合 Grok Imagine 與外部影片工具，持續產出高質素、身份一致的專業與個人內容。</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Skills Section -->
+    <div id="skills" class="max-w-6xl mx-auto px-6 py-20">
+        <div class="text-center mb-12">
+            <div class="text-sm uppercase tracking-[3px] text-slate-500 mb-3">CUSTOM SKILLS</div>
+            <h2 class="section-header tracking-tighter">我為自己打造的 Grok 自訂技能</h2>
+            <p class="mt-4 text-slate-400 max-w-md mx-auto">這些技能讓我的創作流程更高效、一致性更高。</p>
+        </div>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Skill 1 -->
+            <div class="skill-card bg-slate-900 border border-slate-800 rounded-3xl p-8">
+                <div class="flex items-center gap-x-4 mb-6">
+                    <div class="w-12 h-12 bg-emerald-500/10 text-emerald-400 rounded-2xl flex items-center justify-center text-2xl">
+                        <i class="fa-solid fa-user-lock"></i>
+                    </div>
+                    <div>
+                        <div class="font-semibold text-xl">zhuo-jun-feng-identity-lock</div>
+                        <div class="text-xs text-emerald-400">身份鎖定</div>
+                    </div>
+                </div>
+                <p class="text-slate-400 text-[15px] leading-relaxed">嚴格鎖定卓君風視覺身份，確保跨圖像與影片的一致性（面部、身材、服裝、環境）。適用於保險 Reel 及個人運動/寫實內容。</p>
+            </div>
+            
+            <!-- Skill 2 -->
+            <div class="skill-card bg-slate-900 border border-slate-800 rounded-3xl p-8">
+                <div class="flex items-center gap-x-4 mb-6">
+                    <div class="w-12 h-12 bg-blue-500/10 text-blue-400 rounded-2xl flex items-center justify-center text-2xl">
+                        <i class="fa-solid fa-language"></i>
+                    </div>
+                    <div>
+                        <div class="font-semibold text-xl">hk-cantonese-script-normalizer</div>
+                        <div class="text-xs text-blue-400">粵語腳本</div>
+                    </div>
+                </div>
+                <p class="text-slate-400 text-[15px] leading-relaxed">將口語化香港粵語轉為適合字幕與 TTS 的穩定版本，保留自然節奏與 authentic 香港感覺。完美配合配音與唇同步。</p>
+            </div>
+            
+            <!-- Skill 3 -->
+            <div class="skill-card bg-slate-900 border border-slate-800 rounded-3xl p-8">
+                <div class="flex items-center gap-x-4 mb-6">
+                    <div class="w-12 h-12 bg-violet-500/10 text-violet-400 rounded-2xl flex items-center justify-center text-2xl">
+                        <i class="fa-solid fa-video"></i>
+                    </div>
+                    <div>
+                        <div class="font-semibold text-xl">sports-action-video-prompt-generator</div>
+                        <div class="text-xs text-violet-400">運動影片提示</div>
+                    </div>
+                </div>
+                <p class="text-slate-400 text-[15px] leading-relaxed">為 Kling、Google Veo 3、Runway、Luma 等工具生成高質素 10-15 秒運動動作影片提示。強調慢動作、肌肉細節、汗水與真實物理。</p>
+            </div>
+            
+            <!-- Skill 4 -->
+            <div class="skill-card bg-slate-900 border border-slate-800 rounded-3xl p-8">
+                <div class="flex items-center gap-x-4 mb-6">
+                    <div class="w-12 h-12 bg-amber-500/10 text-amber-400 rounded-2xl flex items-center justify-center text-2xl">
+                        <i class="fa-solid fa-magic"></i>
+                    </div>
+                    <div>
+                        <div class="font-semibold text-xl">grok-imagine-photorealism-refiner</div>
+                        <div class="text-xs text-amber-400">寫實優化</div>
+                    </div>
+                </div>
+                <p class="text-slate-400 text-[15px] leading-relaxed">優化 Grok Imagine 提示，強化真實皮膚紋理（毛孔、微瑕疵）、重力物理、自然動作，避免美顏與 AI 假象。適用所有寫實生成。</p>
+            </div>
+            
+            <!-- Skill 5 -->
+            <div class="skill-card bg-slate-900 border border-slate-800 rounded-3xl p-8">
+                <div class="flex items-center gap-x-4 mb-6">
+                    <div class="w-12 h-12 bg-rose-500/10 text-rose-400 rounded-2xl flex items-center justify-center text-2xl">
+                        <i class="fa-solid fa-shield-alt"></i>
+                    </div>
+                    <div>
+                        <div class="font-semibold text-xl">insurance-vhis-comparison-assistant</div>
+                        <div class="text-xs text-rose-400">保險研究</div>
+                    </div>
+                </div>
+                <p class="text-slate-400 text-[15px] leading-relaxed">研究與比較 Manulife VHIS 計劃（住院、門診、復康、免賠額等），為新手爸媽內容提供準確數據與實用解釋。</p>
+            </div>
+            
+            <!-- Skill 6 -->
+            <div class="skill-card bg-slate-900 border border-slate-800 rounded-3xl p-8">
+                <div class="flex items-center gap-x-4 mb-6">
+                    <div class="w-12 h-12 bg-teal-500/10 text-teal-400 rounded-2xl flex items-center justify-center text-2xl">
+                        <i class="fa-solid fa-play-circle"></i>
+                    </div>
+                    <div>
+                        <div class="font-semibold text-xl">hk-manulife-reel-generator</div>
+                        <div class="text-xs text-teal-400">保險 Reel</div>
+                    </div>
+                </div>
+                <p class="text-slate-400 text-[15px] leading-relaxed">為 Manulife 保險生成 1-2 分鐘超寫實粵語 IG Reel。非銷售式故事化，針對香港及內地新手爸媽家庭觀眾。</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Work Section -->
+    <div id="work" class="bg-slate-900 border-y border-slate-800">
+        <div class="max-w-5xl mx-auto px-6 py-20">
+            <div class="text-center mb-12">
+                <div class="text-sm uppercase tracking-[3px] text-slate-500 mb-3">CREATIVE WORK</div>
+                <h2 class="section-header tracking-tighter">我的創作方向</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-slate-950 border border-slate-800 rounded-3xl p-8">
+                    <div class="text-emerald-400 mb-4"><i class="fa-solid fa-shield-alt text-3xl"></i></div>
+                    <h3 class="font-semibold text-xl mb-3">保險教育內容</h3>
+                    <p class="text-slate-400 text-[15px]">使用 Manulife VHIS 計劃研究，為新手爸媽製作實用、非銷售式的粵語短影片與 Reel，強調保障觀念與家庭安心。</p>
+                </div>
+                
+                <div class="bg-slate-950 border border-slate-800 rounded-3xl p-8">
+                    <div class="text-violet-400 mb-4"><i class="fa-solid fa-video text-3xl"></i></div>
+                    <h3 class="font-semibold text-xl mb-3">運動動作影片提示</h3>
+                    <p class="text-slate-400 text-[15px]">為外部 AI 影片工具批量生成高質素運動慢動作提示，專注真實物理、肌肉細節與 cinematic 鏡頭語言。</p>
+                </div>
+                
+                <div class="bg-slate-950 border border-slate-800 rounded-3xl p-8">
+                    <div class="text-amber-400 mb-4"><i class="fa-solid fa-magic text-3xl"></i></div>
+                    <h3 class="font-semibold text-xl mb-3">寫實 AI 視覺生成</h3>
+                    <p class="text-slate-400 text-[15px]">持續迭代 Grok Imagine 提示，追求極致寫實（皮膚紋理、重力、自然不完美），同時維持卓君風身份一致性。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- How I Work with Grok -->
+    <div id="how" class="max-w-5xl mx-auto px-6 py-20">
+        <div class="grid md:grid-cols-12 gap-x-12 items-center">
+            <div class="md:col-span-5 mb-10 md:mb-0">
+                <div class="text-sm uppercase tracking-[3px] text-slate-500 mb-3">WORKFLOW</div>
+                <h2 class="section-header tracking-tighter leading-none">我如何與 Grok 一起工作</h2>
+            </div>
+            
+            <div class="md:col-span-7">
+                <div class="space-y-8 text-[15px]">
+                    <div class="flex gap-6">
+                        <div class="w-8 h-8 rounded-2xl bg-slate-800 flex-shrink-0 flex items-center justify-center text-sm font-mono text-slate-400">01</div>
+                        <div>
+                            <div class="font-medium mb-1.5">身份鎖定優先</div>
+                            <div class="text-slate-400">所有視覺生成都先使用 identity-lock 技能，確保卓君風在不同項目中保持一致。</div>
+                        </div>
+                    </div>
+                    
+                    <div class="flex gap-6">
+                        <div class="w-8 h-8 rounded-2xl bg-slate-800 flex-shrink-0 flex items-center justify-center text-sm font-mono text-slate-400">02</div>
+                        <div>
+                            <div class="font-medium mb-1.5">腳本與視覺同步</div>
+                            <div class="text-slate-400">使用粵語標準化技能優化配音腳本，再搭配寫實優化技能調整視覺提示，確保唇同步與情緒匹配。</div>
+                        </div>
+                    </div>
+                    
+                    <div class="flex gap-6">
+                        <div class="w-8 h-8 rounded-2xl bg-slate-800 flex-shrink-0 flex items-center justify-center text-sm font-mono text-slate-400">03</div>
+                        <div>
+                            <div class="font-medium mb-1.5">批次與自動化</div>
+                            <div class="text-slate-400">開發運動動作提示生成器，快速產出 8-12 條不同動作的影片提示，配合外部工具完成高質素輸出。</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-800 bg-slate-950">
+        <div class="max-w-5xl mx-auto px-6 py-12">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-y-6 text-sm">
+                <div class="text-slate-500">
+                    © 2026 卓君風. Built with Grok & custom skills.
+                </div>
+                
+                <div class="flex items-center gap-x-6">
+                    <a href="https://x.com/nosdu8" target="_blank" class="hover:text-white transition-colors">X / Twitter</a>
+                    <a href="https://github.com/Cullinan30a/grok1" target="_blank" class="hover:text-white transition-colors">GitHub</a>
+                    <span class="text-slate-700">·</span>
+                    <span class="text-slate-500">Taipei / Hong Kong</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple smooth scroll for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    e.preventDefault();
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+        
+        // Tailwind script for any dynamic classes if needed
+        console.log('%c[Grok1] Personal website loaded successfully.', 'color:#64748b');
+    </script>
+</body>
+</html>
